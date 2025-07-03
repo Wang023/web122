@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Gana Sehaki 07/02/2025 -->
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Gana Sehaki">
+  <title>Bootstrap Explorer</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- header -->
+  <header class="site-header">
+    <h1>Bootstrap</h1>
+    <img id="logo-sm-scr" src="images/bootstrap-logo.png" alt="Bootstrap Grid">
+    <button class="menu-toggle" aria-label="Open Menu">☰</button>
+  </header>
+
+  <nav class="mobile-nav hidden">
+    <ul>
+      <li><a href="#intro">Home</a></li>
+      <li><a href="#components">Components</a></li>
+      <li><a href="#resources">Ressources</a></li>
+      <li><a href="#getting-started">Get started</a></li>
+    </ul>
+  </nav>
+
+  <img id="logo-lg-scr" src="images/bootstrap-logo.png" alt="Bootstrap Grid">
+
+<!-- intro -->
+  <section id="intro" class="intro-section">
+    <div class="intro-display">
+      <div class="intro-content">
+        <h2>&nbsp;&nbsp;&nbsp;Welcome to Bootstrap</h2>
+        <p>
+          &nbsp;&nbsp;&nbsp;Bootstrap is the world’s most popular front-end toolkit for building responsive, mobile-first websites and web applications.
+          It offers a comprehensive set of prebuilt UI components, powerful layout tools, responsive grid systems, and modern utility classes
+          that empower developers and designers to create sleek, consistent, and professional interfaces with ease and speed.
+          Whether you're building a personal blog, an admin dashboard, or an enterprise-level platform, Bootstrap adapts to your needs.
+        </p>
+        <p>
+          &nbsp;&nbsp;&nbsp;With built-in support for accessibility, cross-browser compatibility, and customization through Sass variables,
+          Bootstrap enables rapid prototyping and scalable production development without reinventing the wheel.
+          From beautifully styled typography to dynamic modals, flexible forms to animated carousels,
+          every element in Bootstrap is thoughtfully crafted to save time and enhance your workflow.
+          Scroll down to explore the essentials of Bootstrap and unlock the full potential of front-end development.
+        </p>
+      </div>
+
+      <img class="hero-image" src="images/Bootstrap-removebg-preview.png" alt="hero-image">
+    </div>
+    <div class="underline"></div>
+  </section>
+
+
+<!-- components -->
+  <section id="components">
+    <h2>Bootstrap components</h2>
+    <p>
+      Below is a curated list of the most essential Bootstrap components you’ll encounter. <br> Click on <span style="color: #0d6efd;">"More info"</span> where available 
+      to explore further details.
+    </p>
+    <div class="boots-grid">
+      <div class="boots-card">
+        <h3>Grid System</h3>
+        <img src="https://miro.medium.com/v2/resize:fit:1400/1*g8Je1IolJGms3t4fRarV0A.jpeg" alt="Bootstrap Grid">
+        <p>The Bootstrap grid system uses a series of containers, rows, and columns to layout and align content. It’s fully responsive and mobile-first.</p>
+        <a href="#" class="boots-exp-link" data-target="offcanvas-grid">More info</a>
+      </div>
+      <div class="boots-card">
+        <h3>Components</h3>
+        <img src="https://leeddev.io/wp-content/uploads/2024/09/Components-of-Bootstrap.webp" alt="Bootstrap Components">
+        <p>Bootstrap offers many pre-styled components such as buttons, navbars, cards, modals, and more to build responsive UIs quickly.</p>
+        <a href="#" class="boots-exp-link" data-target="offcanvas-components">More info</a>
+      </div>
+      <div class="boots-card">
+        <h3>Utilities</h3>
+        <img src="https://i.ytimg.com/vi/gNCAmxBwD9I/maxresdefault.jpg" alt="Bootstrap Utilities">
+        <p>Utility classes provide quick, low-level styling options for spacing, colors, display, flexbox, and more.</p>
+        <a href="#" class="boots-exp-link" data-target="offcanvas-utilities">More info</a>      
+      </div>
+      <div class="boots-card">
+        <h3>Forms</h3>
+        <img src="https://i.ytimg.com/vi/BuaxdwVOM1I/maxresdefault.jpg" alt="Bootstrap Forms">
+        <p>Bootstrap forms come with custom styles and validation states for creating accessible, consistent forms.</p>
+        <a href="#" class="boots-exp-link" data-target="offcanvas-forms">More info</a>      
+      </div>
+      <div class="boots-card">
+        <h3>Buttons</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-IFNKV4pIIeiUITMpxWqeDNby6NpONIU9qA&s" alt="Bootstrap Buttons">
+        <p>Bootstrap buttons include different sizes, colors, and states for versatile UI actions.</p>
+        <a href="#" class="boots-exp-link" data-target="offcanvas-buttons">More info</a>      
+      </div>
+      <div class="boots-card">
+        <h3>Modals</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzaMRInBNVOCR4sOkb2GEH7AVEmxaYNP5rtQ&s" alt="Bootstrap Modals">
+        <p>Modals are streamlined, but flexible dialog prompts powered by JavaScript for user notifications or interactions.</p>
+        <a href="#" class="boots-exp-link" data-target="offcanvas-modals">More info</a>      
+      </div>
+      <div class="boots-card">
+        <h3>Navbar</h3>
+        <img src="data:image/png;base64,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" alt="Bootstrap Navbar">
+        <p>Responsive navigation headers built with flexbox to support branding, navigation, and more.</p>
+        <a href="#" class="boots-exp-link" data-target="offcanvas-navbar">More info</a>      
+      </div>
+      <div class="boots-card">
+        <h3>Icons</h3>
+        <img src="images/btrp-icons.png" alt="Bootstrap Icons">
+        <p>Bootstrap Icons is an open source icon library with hundreds of icons designed to work with Bootstrap components.</p>
+        <a href="#" class="boots-exp-link" data-target="offcanvas-icons">More info</a>      
+      </div>
+    </div>
+   </section>
+
+  <!-- resources -->
+  <section id="resources" class="resources-section">
+    <div class="resources-intro">
+      <h2>Developer Resources</h2>
+      <img class="resources-img" src="https://img.freepik.com/premium-photo/cloud-icon-hologram-with-multiple-small-icons-around-dark-background-data-storage-safety-concept-3d-rendering_670147-77135.jpg" alt="">
+      <p>
+        Everything you need to build powerful, responsive, and modern user interfaces is right at your fingertips with Bootstrap.
+        From comprehensive, beginner-friendly documentation that walks you through every core feature,
+        to an extensive library of beautifully designed, customizable components, Bootstrap offers a complete framework
+        that helps developers at any level bring their ideas to life quickly and efficiently.<br><br>
+
+        With a fully responsive grid system, built-in utility classes, JavaScript plugins, and Sass support,
+        Bootstrap enables seamless development of layouts that look great on any device—from smartphones to desktops.
+        Its mobile-first approach ensures optimal usability and performance regardless of screen size.<br><br>
+
+        Beyond just code, Bootstrap includes a wide array of resources to help streamline your workflow.
+        You’ll have access to detailed examples, icon sets, and ready-to-use templates for landing pages,
+        dashboards, e-commerce, portfolios, and more—making it easy to start a project or build upon existing ideas.<br><br>
+
+        Bootstrap’s open-source foundation and vibrant developer community contribute to a continuously evolving toolkit,
+        offering frequent updates, bug fixes, and community-built extensions.
+        Whether you prefer using the CDN for a quick start, downloading the source for full customization,
+        or installing with npm or yarn in a modular setup, Bootstrap adapts to your preferred workflow.<br><br>
+
+        It’s more than a framewor, it’s a launchpad for innovation, consistency, and scalable design.
+        With Bootstrap, you're not just building websites, you're creating experiences that work everywhere and feel amazing.
+      </p>
+
+    </div>
+
+    <div class="resources-list">
+      <article class="resource-box">
+        <h3>📘 Official Documentation</h3>
+        <p>
+          Learn how to use Bootstrap's components, layout system, and utilities in detail.
+        </p>
+        <a href="https://getbootstrap.com" target="_blank" class="resource-link">Visit Docs</a>
+      </article>
+
+      <article class="resource-box">
+        <h3>🎨 Bootstrap Icons</h3>
+        <p>
+          A growing set of beautifully designed icons ready to integrate in any Bootstrap project.
+        </p>
+        <a href="https://icons.getbootstrap.com/" target="_blank" class="resource-link">Browse Icons</a>
+      </article>
+
+      <article class="resource-box card-bottom">
+        <h3>🧩 Layout Examples</h3>
+        <p>
+          Get inspired or start fast with example pages like dashboards, forms, pricing, and more.
+        </p>
+        <a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank" class="resource-link">Explore Templates</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- getting started -->
+   <section id="getting-started" class="getting-started-section">
+    <div class="getting-started-intro">
+      <h2>Getting Started with Bootstrap</h2>
+      <img class="start-img" src="data:image/jpeg;base64,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" alt="">
+      <p>
+        <strong>Are you ready to dive into the world of modern, responsive web design?</strong><br>
+        Bootstrap is your gateway to building sleek, powerful, and fully responsive websites without starting from scratch.<br>
+        Whether you're a beginner taking your first steps in front‑end development or an experienced developer looking <br>
+        to speed up your workflow, Bootstrap offers flexible, reliable tools designed to meet your needs.<br>
+        With a comprehensive grid system, pre‑styled components, powerful JavaScript plugins, and extensive documentation, <br>
+        Bootstrap simplifies the process of creating beautiful layouts that adapt to any screen size—from smartphones to desktops <br>
+        and everything in between.<br><br>
+
+        There are multiple ways to get started with Bootstrap, so you can choose the one that fits your project and development style best.<br>
+        You might begin with the official CDN for the quickest setup, download the compiled source files for full customization, or even install <br>
+        it via package managers like npm or yarn for integration into more advanced development workflows.<br>
+        You can also explore Bootstrap’s starter templates and examples to jump‑start your project or learn how to combine Bootstrap <br>
+        with popular tools like Sass, Webpack, or Gulp for enhanced performance and maintainability.<br><br>
+
+        Bootstrap is also open source, with a thriving community of developers who continuously contribute updates, improvements, and new ideas.<br>
+        By using Bootstrap, you’re joining millions of developers who trust it to build fast, accessible, and responsive websites.<br>
+        No matter the scale of your project—personal portfolio, landing page, corporate site, or web app—Bootstrap gives you the foundation <br>
+        to create it faster and smarter. So go ahead, explore the possibilities, and start building with confidence today.
+      </p>
+
+    </div>
+
+    <div class="getting-started-cards">
+      <div class="getting-started-card">
+        <h3>CDN Integration</h3>
+        <p>Include Bootstrap directly from a Content Delivery Network, perfect for quick prototypes and learning.</p>
+        <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"&gt;</code>
+      </div>
+
+      <div class="getting-started-card">
+        <h3>Download Locally</h3>
+        <p>Download the compiled CSS and JS files to work offline or integrate into your project structure.</p>
+        <a href="https://getbootstrap.com/docs/5.3/getting-started/download/" target="_blank" class="resource-link">Download Bootstrap</a>
+      </div>
+
+      <div class="getting-started-card">
+        <h3>Use via npm</h3>
+        <p>Install Bootstrap with npm to include it in your modern front-end build tools and workflow.</p>
+        <code>npm install bootstrap</code>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- off canvas -->
+
+  <!-- OFFCANVAS GRID -->
+  <div id="offcanvas-grid" class="offcanvas">
+    <div class="offcanvas-content">
+      <button class="close-btn">&times;</button>
+      <h2>Bootstrap Grid System</h2>
+      <div class="underline-offcanvas"></div>
+      <p>&nbsp;&nbsp;&nbsp;The Bootstrap grid system is based on a 12-column layout and uses a series of containers, rows, and columns to organize and align content. It is mobile-first and fully responsive, adapting to any screen size.</p>
+      <h2>Key Features</h2>
+      <div class="underline-offcanvas"></div>
+      <ul>
+        <li><b>Responsive</b> breakpoints for different screen sizes.</li>
+        <li><b>Flexible</b> columns that resize automatically.</li>
+        <li>Nested grids for <b>complex</b> layouts.</li>
+      </ul>
+      <h2>Usage</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;To use Bootstrap in your project, you first need to include the Bootstrap CSS file by adding the following link inside the <code>&lt;head&gt;</code> of your HTML document:
+        <br><br>
+        <code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code>
+        <br><br>
+        After that, wrap your content inside a container using
+        <code>&lt;div class="container"&gt;</code> for a responsive fixed-width layout or 
+        <code>&lt;div class="container-fluid"&gt;</code> for a full-width layout. 
+        <br><br>
+        Inside the container, you can create rows with 
+        <code>&lt;div class="row"&gt;</code>, and within each row, use column classes like 
+        <code>&lt;div class="col"&gt;</code>, 
+        <code>&lt;div class="col-6"&gt;</code>, or 
+        <code>&lt;div class="col-md-4"&gt;</code> to control the layout and responsiveness.
+        <br><br>
+        Finally, for Bootstrap’s JavaScript components to work (like modals or offcanvas), add this script before the closing <code>&lt;/body&gt;</code> tag:
+        <br><br>
+        <code>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code>
+      </p>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS COMPONENTS -->
+  <div id="offcanvas-components" class="offcanvas">
+    <div class="offcanvas-content">
+      <button class="close-btn">&times;</button>
+
+      <h2>Bootstrap Components</h2>
+      <div class="underline-offcanvas"></div>
+      <p>&nbsp;&nbsp;&nbsp;Bootstrap provides a wide range of reusable UI components that help developers build modern, responsive websites quickly and efficiently. These components are pre-styled and ready to use with minimal configuration.</p>
+
+      <h2>Key Components</h2>
+      <div class="underline-offcanvas"></div>
+      <ul>
+        <li><strong>Alerts</strong> – Used to display messages like success, warnings, or errors.</li>
+        <li><strong>Buttons</strong> – Predefined button styles for actions, with different color variants.</li>
+        <li><strong>Cards</strong> – Flexible content containers with options for headers, footers, images, and text.</li>
+        <li><strong>Modals</strong> – Pop-up dialog boxes used to show messages, forms, or content without leaving the current page.</li>
+        <li><strong>Navbar</strong> – Responsive navigation bars that adapt to mobile and desktop layouts.</li>
+        <li><strong>Offcanvas</strong> – Hidden side panels that slide into view to show menus or content (like this one!).</li>
+      </ul>
+
+      <h2>Usage</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;To use Bootstrap’s components, you first need to include the Bootstrap CSS file in your HTML document's <code>&lt;head&gt;</code>:
+        <br><br>
+        <code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code>
+        <br><br>
+        Then, you can add components directly to your HTML. For example, to create a button:
+        <br><br>
+        <code>&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;</code>
+        <br><br>
+        Or an alert message:
+        <br><br>
+        <code>&lt;div class="alert alert-success"&gt;Operation completed successfully!&lt;/div&gt;</code>
+        <br><br>
+        For components that require interactivity (like modals, dropdowns, or this offcanvas), include the Bootstrap JavaScript bundle before the closing <br> <code>&lt;/body&gt;</code>:
+        <br><br>
+        <code>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt; <br> &lt;/script&gt;</code>
+      </p>
+    </div>
+  </div>
+  
+  <!-- OFFCANVAS UTILITIES -->
+  <div id="offcanvas-utilities" class="offcanvas-left">
+    <div class="offcanvas-content">
+      <button class="close-btn">&times;</button>
+
+      <h2>Bootstrap Utilities</h2>
+      <div class="underline-offcanvas"></div>
+      <p>&nbsp;&nbsp;&nbsp;Bootstrap utilities are single-purpose classes that help you control layout, spacing, typography, colors, and visibility. They are lightweight and easy to use directly in your HTML without writing custom CSS.</p>
+
+      <h2>Common Utility Categories</h2>
+      <div class="underline-offcanvas"></div>
+      <ul>
+        <li><strong>Spacing</strong> – Use <code>.m-*</code> and <code>.p-*</code> for margin and padding (e.g. <code>.mb-3</code> for margin-bottom).</li>
+        <li><strong>Text</strong> – Classes like <code>.text-center</code>, <code>.text-uppercase</code>, or <code>.fw-bold</code>.</li>
+        <li><strong>Display</strong> – Control visibility with <code>.d-none</code>, <code>.d-block</code>, <code>.d-flex</code>, etc.</li>
+        <li><strong>Colors</strong> – Background and text color utilities like <code>.bg-primary</code>, <code>.text-danger</code>.</li>
+        <li><strong>Flex & Grid</strong> – Quickly apply <code>.d-flex</code>, <code>.justify-content-center</code>, <code>.align-items-start</code>, etc.</li>
+        <li><strong>Sizing</strong> – Width and height utilities like <code>.w-100</code>, <code>.h-50</code>.</li>
+      </ul>
+
+      <h2>Usage</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;To use Bootstrap utilities, just apply the class directly on your HTML element. No need to write CSS or define styles manually.
+        <br><br>
+        Example for centering text and adding padding:
+        <br><br>
+        <code>&lt;div class="text-center p-3"&gt;Centered text with padding&lt;/div&gt;</code>
+        <br><br>
+        Example for hiding an element on small screens:
+        <br><br>
+        <code>&lt;div class="d-none d-md-block"&gt;Visible only on medium screens and up&lt;/div&gt;</code>
+        <br><br>
+        Bootstrap utilities help you build layouts and interfaces faster by using consistent, responsive utility classes.
+      </p>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS FORMS -->
+  <div id="offcanvas-forms" class="offcanvas-left">
+    <div class="offcanvas-content">
+      <button class="close-btn">&times;</button>
+
+      <h2>Bootstrap Forms</h2>
+      <div class="underline-offcanvas"></div>
+      <p>&nbsp;&nbsp;&nbsp;Bootstrap makes it easy to create clean, consistent, and responsive forms using built-in classes. You can quickly style inputs, labels, selects, checkboxes, and more without writing custom CSS.</p>
+
+      <h2>Form Components</h2>
+      <div class="underline-offcanvas"></div>
+      <ul>
+        <li><strong>Form Groups</strong> – Use <code>.mb-3</code> or <code>.form-group</code> to space out inputs.</li>
+        <li><strong>Labels</strong> – Use the <code>&lt;label&gt;</code> tag linked with <code>for</code> attribute.</li>
+        <li><strong>Inputs</strong> – Use <code>.form-control</code> for text fields, emails, passwords, etc.</li>
+        <li><strong>Select</strong> – Use <code>.form-select</code> for dropdowns.</li>
+        <li><strong>Checkboxes & Radios</strong> – Use <code>.form-check</code> to group input + label.</li>
+        <li><strong>Validation</strong> – Add classes like <code>.is-valid</code> and <code>.is-invalid</code> for feedback.</li>
+      </ul>
+
+      <h2>Usage</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;Here’s a basic example of a Bootstrap form with an email input and a submit button:
+        <br><br>
+        <code>
+          &lt;form&gt;<br>
+          &nbsp;&nbsp;&lt;div class="mb-3"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email" class="form-label"&gt;Email address&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" class="form-control" id="email"&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;<br>
+          &lt;/form&gt;
+        </code>
+        <br><br>
+        You can also create inline forms using <code>.row</code> and column classes to align inputs side by side.
+      </p>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS BUTTONS -->
+  <div id="offcanvas-buttons" class="offcanvas">
+    <div class="offcanvas-content">
+      <button class="close-btn">&times;</button>
+
+      <h2>Bootstrap Buttons</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;Bootstrap provides pre-styled buttons with different colors, sizes, and functionalities. Buttons are one of the most used UI elements and can be customized using utility classes or additional states like active, disabled, or outlined.
+      </p>
+
+      <h2>Types of Buttons</h2>
+      <div class="underline-offcanvas"></div>
+      <ul>
+        <li><strong>Basic Buttons</strong> – Use <code>.btn</code> along with a variant like <code>.btn-primary</code>, <code>.btn-danger</code>, etc.</li>
+        <li><strong>Outline Buttons</strong> – Use <code>.btn-outline-*</code> classes for border-only buttons.</li>
+        <li><strong>Disabled Buttons</strong> – Add <code>disabled</code> attribute or class to prevent interaction.</li>
+        <li><strong>Active State</strong> – Add <code>.active</code> to show a pressed effect.</li>
+        <li><strong>Button Sizes</strong> – Use <code>.btn-sm</code> or <code>.btn-lg</code> for size variations.</li>
+        <li><strong>Block Buttons</strong> – Add <code>.d-grid</code> and <code>.gap-2</code> to stack buttons full width.</li>
+      </ul>
+
+      <h2>Usage</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;To create a Bootstrap button, use the <code>.btn</code> class with a color modifier:
+        <br><br>
+        <code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;</code><br><br>
+
+        Outline version:
+        <br><br>
+        <code>&lt;button class="btn btn-outline-success"&gt;Success Outline&lt;/button&gt;</code><br><br>
+
+        Disabled version:
+        <br><br>
+        <code>&lt;button class="btn btn-secondary" disabled&gt;Disabled&lt;/button&gt;</code><br><br>
+
+        You can also turn a link into a button:
+        <br><br>
+        <code>&lt;a href="#" class="btn btn-warning"&gt;Link Button&lt;/a&gt;</code>
+      </p>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS MODALS -->
+  <div id="offcanvas-modals" class="offcanvas">
+    <div class="offcanvas-content">
+      <button class="close-btn">&times;</button>
+
+      <h2>Bootstrap Modals</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;Bootstrap modals are popup dialogs that appear on top of the main content. They are used to display messages, forms, confirmations, or any other interactive content without navigating away from the page.
+      </p>
+
+      <h2>Key Features</h2>
+      <div class="underline-offcanvas"></div>
+      <ul>
+        <li><strong>Centered</strong> – Automatically displayed in the middle of the screen.</li>
+        <li><strong>Stackable</strong> – Multiple modals can be opened and managed.</li>
+        <li><strong>Easy to close</strong> – Close via button, outside click, or Escape key.</li>
+        <li><strong>Scrollable body</strong> – Background scroll is disabled when open.</li>
+        <li><strong>Size options</strong> – Use <code>.modal-sm</code>, <code>.modal-lg</code>, or <code>.modal-xl</code>.</li>
+        <li><strong>Animation</strong> – Use <code>.fade</code> for a smooth transition effect.</li>
+      </ul>
+
+      <h2>Usage</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;First, include Bootstrap’s CSS in your <code>&lt;head&gt;</code>:
+        <br><br>
+        <code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code>
+        <br><br>
+        Then, add your modal HTML structure:
+        <br><br>
+        <code>
+          &lt;!-- Trigger button --&gt;<br>
+          &lt;button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal"&gt;Open Modal&lt;/button&gt;<br><br>
+          &lt;!-- Modal --&gt;<br>
+          &lt;div class="modal fade" id="demoModal" tabindex="-1"&gt;<br>
+          &nbsp;&nbsp;&lt;div class="modal-dialog"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal-content"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal-header"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5 class="modal-title"&gt;Modal Title&lt;/h5&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn-close" data-bs-dismiss="modal"&gt;&lt;/button&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal-body"&gt;This is the modal content.&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal-footer"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &lt;/div&gt;
+        </code>
+        <br><br>
+        Finally, include the Bootstrap JavaScript bundle before <code>&lt;/body&gt;</code>:
+        <br><br>
+        <code>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code>
+      </p>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS NAVBAR -->
+  <div id="offcanvas-navbar" class="offcanvas-left">
+    <div class="offcanvas-content">
+      <button class="close-btn">&times;</button>
+
+      <h2>Bootstrap Navbar</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;The Bootstrap Navbar is a responsive navigation header that can include branding, navigation links, dropdowns, forms, and more. It's fully customizable and adapts to different screen sizes automatically.
+      </p>
+
+      <h2>Key Features</h2>
+      <div class="underline-offcanvas"></div>
+      <ul>
+        <li><strong>Responsive collapse</strong> – Automatically collapses on smaller screens.</li>
+        <li><strong>Branding support</strong> – Add your logo or site name with <code>.navbar-brand</code>.</li>
+        <li><strong>Navigation links</strong> – Easily structure links with <code>.nav</code> and <code>.nav-item</code>.</li>
+        <li><strong>Dropdowns</strong> – Support for nested dropdowns inside the navbar.</li>
+        <li><strong>Form integration</strong> – Add search bars, login fields, etc., inside the navbar.</li>
+        <li><strong>Color themes</strong> – Use classes like <code>.bg-light</code>, <code>.bg-dark</code>, <code>.navbar-light</code>, or <code>.navbar-dark</code>.</li>
+      </ul>
+
+      <h2>Usage</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;Start by adding the Bootstrap CSS in the <code>&lt;head&gt;</code> of your document:
+        <br><br>
+        <code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code>
+        <br><br>
+        Then create your navbar structure:
+        <br><br>
+        <code>
+          &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;<br>
+          &nbsp;&nbsp;&lt;div class="container-fluid"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="navbar-brand" href="#"&gt;MySite&lt;/a&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="collapse navbar-collapse" id="navbarNav"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="navbar-nav"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link active" href="#"&gt;Home&lt;/a&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="nav-item"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="nav-link" href="#"&gt;Features&lt;/a&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &lt;/nav&gt;
+        </code>
+        <br><br>
+        Don’t forget to add the Bootstrap JS bundle before <code>&lt;/body&gt;</code>:
+        <br><br>
+        <code>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code>
+      </p>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS ICONS -->
+  <div id="offcanvas-icons" class="offcanvas-left">
+    <div class="offcanvas-content">
+      <button class="close-btn">&times;</button>
+
+      <h2>Bootstrap Icons</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;Bootstrap Icons is an official open-source icon library developed by the Bootstrap team. It offers over 1,800 SVG-based icons that can be used directly in your HTML and styled with CSS or Bootstrap utility classes.
+      </p>
+
+      <h2>Key Features</h2>
+      <div class="underline-offcanvas"></div>
+      <ul>
+        <li><strong>SVG-based</strong> – Sharp, scalable icons without image files.</li>
+        <li><strong>Customizable</strong> – You can style icons with color, size, and spacing using CSS or Bootstrap classes.</li>
+        <li><strong>Easy to use</strong> – Add icons using simple <code>&lt;i&gt;</code> or <code>&lt;svg&gt;</code> elements.</li>
+        <li><strong>No extra JS required</strong> – Just include the stylesheet or use CDN.</li>
+        <li><strong>Consistent style</strong> – Designed to match Bootstrap’s aesthetic.</li>
+      </ul>
+
+      <h2>Usage</h2>
+      <div class="underline-offcanvas"></div>
+      <p>
+        &nbsp;&nbsp;&nbsp;To use Bootstrap Icons, add the CDN in your <code>&lt;head&gt;</code>:
+        <br><br>
+        <code>
+          &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"&gt;
+        </code>
+        <br><br>
+        Then you can use any icon with the <code>bi</code> class:
+        <br><br>
+        <code>&lt;i class="bi bi-alarm"&gt;&lt;/i&gt;</code> → <i class="bi bi-alarm"></i><br>
+        <code>&lt;i class="bi bi-house-fill"&gt;&lt;/i&gt;</code> → <i class="bi bi-house-fill"></i> <br><br>
+        You can also style icons using Bootstrap utilities:
+        <br><br>
+        <code>&lt;i class="bi bi-check-circle-fill text-success fs-3"&gt;&lt;/i&gt;</code> → <i class="bi bi-check-circle-fill" style=" color: #42d264;"></i>
+        green + bigger icon
+        <br><br>
+        You can explore all available icons here:<br>
+        <a href="https://icons.getbootstrap.com/" target="_blank" style="color: #f1f1f1;">https://icons.getbootstrap.com&#8599;</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="overline"></div>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Gana Sehaki Bootstrap Explorer. All rights reserved.</p>
+      <details class="colophon">
+        <summary>Colophon</summary>
+        <p>This website was designed and built using the following tools and technologies:</p>
+        <ul>
+          <li><strong>HTML5</strong> and <strong>CSS3</strong> for semantic structure and styling</li>
+          <li><strong>JavaScript</strong> for interactive elements and responsiveness</li>
+          <li><strong>Visual Studio Code</strong> as the code editor</li>
+         </ul>
+      </details>
+    </div>
+  </footer>
+  <div><a href="#" class="back-to-top">&#8593;</a></div>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>
