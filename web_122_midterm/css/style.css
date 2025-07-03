@@ -383,9 +383,6 @@ header.site-header {
   gap: 1.5rem;
   grid-template-columns: 1fr;
   margin-top: 2em;
-  width : 50%;
-}
-
 }
 
 .getting-started-card {
@@ -397,6 +394,7 @@ header.site-header {
   -moz-border-radius: 0.8em;
   -ms-border-radius: 0.8em;
   -o-border-radius: 0.8em;
+  max-width: 100%;
 }
 
 .getting-started-card h3 {
