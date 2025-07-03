@@ -1,32 +1,79 @@
 /* Gana Sehaki 07/02/2025 */
-:root {
-  --color-primary: #0d6efd;       /* Bootstrap Blue */
-  --color-secondary: #6c757d;     /* Soft Gray */
-  --color-background: #f8f9fa;    /* Off-White */
-  --color-text: #212529;          /* Dark Charcoal */
-  --offcanvas-bg: #1f70eb;   /* offcanvas bg*/
-  --offcanvas-text: #f1f1f1; /* offcanvas text color */
-}
-*{
+
+/* ===== ENHANCED CSS RESET ===== */
+/* Universal reset */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base styles (Mobile First) */
-
-html{
+/* HTML and body reset */
+html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--color-background);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
 }
+
+/* Remove default styling from common elements */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    list-style: none;
+}
+
+/* Image reset */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: block;
+}
+
+/* Link reset */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Button reset */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --color-primary: #0d6efd;       /* Bootstrap Blue */
+  --color-secondary: #6c757d;     /* Soft Gray */
+  --color-background: #f8f9fa;    /* Off-White */
+  --color-text: #212529;          /* Dark Charcoal */
+  --offcanvas-bg: #1f70eb;        /* offcanvas bg*/
+  --offcanvas-text: #f1f1f1;      /* offcanvas text color */
+}
+
+/* ===== BASE STYLES ===== */
 section{
   margin-bottom: 3em;
 }
+
 h3{
   color: var(--color-secondary);
 }
@@ -43,9 +90,6 @@ p{
   color: var(--color-primary);
   border: 3px solid var(--color-primary);
   text-decoration: none;
-  /*position: fixed;
-  top: 90vh;
-  right: 2em;*/
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -61,13 +105,13 @@ p{
   -ms-transition: all ease-in-out .2s;
   -o-transition: all ease-in-out .2s;
 }
+
 .back-to-top:hover{
   background-color: var(--offcanvas-bg);
   color: var(--offcanvas-text);
 }
 
-/* header */
-
+/* ===== HEADER ===== */
 header.site-header {
   display: flex;
   justify-content: space-between;
@@ -78,6 +122,7 @@ header.site-header {
 
 .site-header > h1{
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 .menu-toggle {
@@ -88,8 +133,7 @@ header.site-header {
   cursor: pointer;
 }
 
-/* navbar */
-
+/* ===== NAVBAR ===== */
 .mobile-nav {
   background: var(--color-background);
   backdrop-filter: blur(.9px);
@@ -119,6 +163,7 @@ header.site-header {
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
 }
+
 .mobile-nav li:nth-child(4) a{
   color: var(--color-primary);
   font-weight: bold;
@@ -128,9 +173,11 @@ header.site-header {
   -ms-transition: transform ease .2s;
   -o-transition: transform ease .2s;
 }
+
 .mobile-nav a:hover {
   color: var(--color-primary);
 }
+
 .mobile-nav li:nth-child(4) a:hover{
   transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);
@@ -154,8 +201,7 @@ header.site-header {
   display: none;
 }
 
-/* ----- intro section ----- */
-
+/* ===== INTRO SECTION ===== */
 .intro-section {
   background-color: var(--color-background);
   color:  var(--color-text);
@@ -167,6 +213,7 @@ header.site-header {
   margin: 0 auto;
   text-align: center;
 }
+
 .hero-image{
   display: block;
   width: 40%;
@@ -178,6 +225,7 @@ header.site-header {
   font-size: 1.85em;
   margin-bottom: 1rem;
   color: var(--color-primary);
+  font-weight: bold;
 }
 
 .intro-content p {
@@ -193,8 +241,7 @@ header.site-header {
   margin: 0 auto;
 }
 
-/* ----- componenets section ----- */
-
+/* ===== COMPONENTS SECTION ===== */
 .boots-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -207,6 +254,7 @@ header.site-header {
   margin-bottom: 1rem;
   color: var(--color-text);
   text-align: center;
+  font-weight: bold;
 }
 
 #components > p{
@@ -215,6 +263,7 @@ header.site-header {
   line-height: 1.3;
   margin-bottom: 1em;
 }
+
 .boots-card {
   background: var(--color-background);
   padding: 1.5em;
@@ -226,6 +275,7 @@ header.site-header {
 .boots-card > h3{
   margin-bottom: 1em;
   color: var(--color-text);
+  font-weight: bold;
 }
 
 .boots-card p{
@@ -269,16 +319,13 @@ header.site-header {
   color: #f1f1f1;
 }
 
-/* ----- ressources section ----- */
-
-/* container */
+/* ===== RESOURCES SECTION ===== */
 .resources-section {
   background-color: var(--color-background);
   color: var(--color-text);
   padding: 2rem 1rem;
 }
 
-/* Intro text */
 .resources-intro {
   max-width: 700px;
   margin: 0 auto 2rem;
@@ -289,6 +336,7 @@ header.site-header {
   font-size: 1.4rem;
   margin-bottom: 2em;
   color: var(--color-text);
+  font-weight: bold;
 }
 
 .resources-img{
@@ -306,7 +354,6 @@ header.site-header {
   color: var(--color-text);
 }
 
-/* Resource cards layout */
 .resources-list {
   display: grid;
   gap: 1.5rem;
@@ -334,6 +381,7 @@ header.site-header {
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
   color: var(--color-text);
+  font-weight: bold;
 }
 
 .resource-box p {
@@ -342,7 +390,6 @@ header.site-header {
   color: var(--color-secondary);
 }
 
-/* Link style */
 .resource-link {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -358,9 +405,7 @@ header.site-header {
   color: var(--color-primary);
 }
 
-
-/* ----- gettinng started ----- */
-
+/* ===== GETTING STARTED SECTION ===== */
 .getting-started-section {
   padding: 4em 1.5em;
   background-color: var(--color-background);
@@ -370,6 +415,7 @@ header.site-header {
 .getting-started-intro h2 {
   font-size: 1.4em;
   margin-bottom: 2em;
+  font-weight: bold;
 }
 
 .start-img{
@@ -405,6 +451,7 @@ header.site-header {
   color: var(--color-text);
   font-size: 1.15em;
   margin-bottom: 1.5em;
+  font-weight: bold;
 }
 
 .getting-started-card p {
@@ -421,9 +468,10 @@ header.site-header {
   border-radius: 5px;
   font-size: 0.9rem;
   overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-/* ----- off canvas ----- */
+/* ===== OFFCANVAS ===== */
 /* RIGHT slide */
 .offcanvas {
   position: fixed;
@@ -457,17 +505,21 @@ header.site-header {
   margin: 1.6em 1em 1em 1em;
   color: var(--offcanvas-text) !important;
   text-align: center;
+  font-weight: bold;
 }
+
 .underline-offcanvas{
   height: 1.7px;
   width: 5em;
   background-color: var(--offcanvas-text);
   margin: 1em auto;
 }
-.offcanvas p, ul{
+
+.offcanvas p, .offcanvas ul{
   color: var(--offcanvas-text) !important;
   font-size: 1.1em;
 }
+
 /* LEFT slide */
 .offcanvas-left {
   position: fixed;
@@ -494,7 +546,7 @@ header.site-header {
   left: 0;
 }
 
-.offcanvas-left p, ul{
+.offcanvas-left p, .offcanvas-left ul{
   color: var(--offcanvas-text) !important;
   font-size: 1.1em;
 }
@@ -527,8 +579,7 @@ header.site-header {
   border-color: red;
 }
 
-/* ---- footer ----- */
-
+/* ===== FOOTER ===== */
 .overline{
   height: 2px;
   width: 5em;
@@ -564,23 +615,22 @@ footer a {
   color: var(--color-text);
   list-style: none;
 }
+
 .colophon ul li{
   color: var(--color-secondary);
 }
 
-
+/* ===== MEDIA QUERIES ===== */
 /* Tablet */
 @media (min-width: 768px) {
-
-  /* componenets */
   .boots-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* resources */
+  
   .resources-list{
     grid-template-columns: repeat(2, 1fr);
   }
-  /* getting started */
+  
   .getting-started-cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -588,69 +638,76 @@ footer a {
 
 /* Desktop */
 @media (min-width: 1024px) {
-
-  /* header */
   header.site-header{
     border: none;
   }
+  
   .site-header > h1{
-  font-size: 2em;
+    font-size: 2em;
   }
+  
   .menu-toggle{
     display: none;
   }
+  
   nav.hidden{
     border: none;
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
+  
   nav ul{
     gap: 2em;
     margin-top: -3em;
   }
+  
   nav ul li{
     letter-spacing: 1px;
     font-size: 1.2em;
   }
+  
   #logo-sm-scr{
     display: none;
   }
+  
   #logo-lg-scr{
     display: flex;
     justify-content: flex-end;
     position: absolute;
     right: 2em;
     top: 1em;
-  }
-  #logo-lg-scr{
     max-width: 4em;
     max-height: 4em;
   }
 
-  /* intro */
   .intro-display{
     display: flex;
-   }
+  }
+  
   .intro-content{
     margin-left: 5em;
   }
+  
   .hero-image{
     display: block;
     width: 25em;
     height: 22em;
     margin-right: 5em;
     filter:    
-    drop-shadow(0 4px 10px rgba(128, 0, 255, 0.35))  
-    drop-shadow(0 0 10px   rgba(128, 0, 255, 0.55));
-}
+      drop-shadow(0 4px 10px rgba(128, 0, 255, 0.35))  
+      drop-shadow(0 0 10px   rgba(128, 0, 255, 0.55));
+  }
+  
   .intro-content > h2{
     text-align: left;
   }
+  
   .intro-content > p{
     font-size: 1.4em;
     text-align: left;
   }
+  
   .underline{
     height: 4px;
     width: 10em;
@@ -662,43 +719,39 @@ footer a {
     -ms-border-radius: .5em;
     -o-border-radius: .5em;
   }
-  /* componenets */
+  
   .boots-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.5em;
   }
-  /* resources */
+  
   .resources-list{
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5em;
   }
-  /* .card-bottom{
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: 50%; 
-  } */
-  #componenets > p{
+  
+  #components > p{
     font-size: 1.4em;
   }
 
-  /* getting started */
   .getting-started-cards {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
   }
+  
   .start-img{
     max-width: 30em;
     height: auto;
-}
+  }
 
-  /* offcanvas */
   .offcanvas {
     max-width: 650px;
   }
+  
   .offcanvas-left {
     max-width: 650px;
   }
-  /* footer */
+  
   .overline{
     height: 4px;
     width: 10em;
@@ -710,6 +763,7 @@ footer a {
     -ms-border-radius: .5em;
     -o-border-radius: .5em;
   }
+  
   .colophon ul {
     margin: 0 auto;
   }
