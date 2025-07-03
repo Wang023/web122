@@ -43,9 +43,13 @@ p{
   color: var(--color-primary);
   border: 3px solid var(--color-primary);
   text-decoration: none;
-  position: fixed;
+  /*position: fixed;
   top: 90vh;
-  right: 2em;
+  right: 2em;*/
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
   border-radius: 25em;
   -webkit-border-radius: 25em;
   -moz-border-radius: 25em;
