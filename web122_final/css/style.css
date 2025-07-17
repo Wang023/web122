@@ -87,6 +87,7 @@ header{
 /* menu panel*/
 .nav-menu{
   position: fixed;
+  background-color: var(--background);
   top: 55px;
   left: -100%;/*hiddenoffcanvas*/
   width: 100%;
