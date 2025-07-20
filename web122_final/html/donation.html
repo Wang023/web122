@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/donation.css">
+
+   
+</head>
+<body>
+    <header class="header">
+      <h1>Donate</h1>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="../index.html#programs" class="nav-link">PROGRAMS</a></li>
+          <li class="nav-item"><a href="../index.html#resources" class="nav-link">RESSOURCES</a></li>
+          <li class="nav-item"><a href="../html/about.html" class="nav-link">ABOUT</a></li>
+          <li class="nav-item"><a href="../html/contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div> <!-- close of hamburger class -->
+      </nav>
+    </header>
+
+      
+    <main class="main-content">
+        <aside class="donation-form">
+            <h2 class="form-title">Help save lives. Donate now.</h2>
+
+            <div class="frequency-toggle">
+                <button class="frequency-btn active" onclick="toggleFrequency('monthly', this)">Monthly</button>
+                <button class="frequency-btn" onclick="toggleFrequency('one-time', this)">One-time</button>
+            </div>
+
+            <h3 class="donationTitle">Choose an amount to donate Monthly</h3>
+
+            <!-- Montants mensuels -->
+            <div id="monthly-amounts" class="donation-amounts">
+              <button class="amount-btn" onclick="selectAmount(15, this)">$15</button>
+              <button class="amount-btn" onclick="selectAmount(30, this)">$30</button>
+              <button class="amount-btn" onclick="selectAmount(50, this)">$50</button>
+              <button class="amount-btn " onclick="selectAmount(100, this)">$100</button>
+              <input type="number" class="amount-input-custom" placeholder="$US Other" >
+            </div>
+
+
+            <!-- Montants one-time (masqués par défaut) -->
+            <div id="onetime-amounts" class="donation-amounts hidden">
+              <button class="amount-btn" onclick="selectAmount(50, this)">$50</button>
+              <button class="amount-btn" onclick="selectAmount(100, this)">$100</button>
+              <button class="amount-btn" onclick="selectAmount(250, this)">$250</button>
+              <button class="amount-btn" onclick="selectAmount(1000, this)">$1000</button>
+              <input type="number" class="amount-input-custom" placeholder="$US Other" >
+            </div>
+
+            <div class="btn-ctn">
+                <button id="continueBtn">Continue</button> 
+            </div>
+            <div class="donation-des">
+                <p>Unrestricted donations enable MSF to carry out our programs around the world. 
+                If we cannot honor 
+                a specific request, we will reallocate your donation to where the needs are greatest.</p>
+            </div>
+          
+        </aside>
+      <form id="donationForm" class="donationForm" style="display: none;">
+        
+          <div class="back-arrow" id="backToAside">
+            <button class ="btn-back-arrow">Back</button> 
+          </div>
+          <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required>
+          </div>
+
+          <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required>
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+              <label for="address">Address *</label>
+              <input type="text" id="address" name="address" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State *</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                </select>
+            </div>
+            <div class="btn-ctnForm">
+                <button id="goToPayment">Continue</button>
+            </div>
+            </div>
+        </form> 
+        <!-- payment form -->
+        <form id="paymentForm" class="paymentForm" style="display: none;">
+          <div class="back-arrow">
+            <button type="button" class="btn-back-arrow" id="backToDonation">Back</button>
+          </div>
+
+          <div class="form-group">
+            <label for="cardName">Name on Card *</label>
+            <input type="text" id="cardName" name="cardName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cardNumber">Card Number *</label>
+            <input type="text" id="cardNumber" name="cardNumber" required maxlength="19" placeholder="1234 5678 9012 3456">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expiry">Expiration Date *</label>
+              <input type="text" id="expiry" name="expiry" required placeholder="MM/YY">
+            </div>
+
+            <div class="form-group">
+              <label for="cvv">CVV *</label>
+              <input type="text" id="cvv" name="cvv" required maxlength="4" placeholder="123">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Donation Amount ($)*</label>
+            <input type="number" id="amount" name="amount" required min="1" step="0.01">
+          </div>
+
+          <div class="btn-ctnForm">
+            <button type="submit">Submit Donation</button>
+          </div>
+        </form>
+
+
+        <section class="info-section">
+            <div class="hero-content">
+              <h2 class="info-title">Thank you for supporting our lifesaving work.</h2>
+              <p class="info-text">
+                Your support plays a powerful role in our lifesaving work. We are grateful for the compassion you demonstrate through your loyal commitment to our patients around the world.
+              </p>
+              <p class="info-text">
+                For Doctors Without Borders, the ability to respond quickly to medical humanitarian emergencies is crucial to saving more lives. Unrestricted funds allow us to allocate our resources most efficiently and where the needs are greatest.
+              </p>
+            </div> 
+        </section>
+
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <button class="faq-question">Is my donation secure?</button>
+              <div class="faq-answer">Yes. Your security and privacy is our highest priority. We use industry-standard SSL technology to keep your information safe and secure.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">Do I get a receipt?</button>
+              <div class="faq-answer">Yes, we’ll send a receipt to the email address you provide when donating. You will also receive a receipt in the mail 3 to 4 weeks after the date of your donation.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">How is my personal data handled?</button>
+              <div class="faq-answer">Your personal data is processed in accordance with our privacy policy and also in accordance with the privacy policy of Classy, our website partner.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">Donation assistance</button>
+              <div class="faq-answer">If you would like assistance with your donation,
+                please contact Donor Services at (888) 392-0392, Monday-Sunday from 8 a.m. - 11 p.m. ET, 
+                or email us at donations@newyork.msf.org.
+
+                Unrestricted donations enable MSF to carry out our programs around the world. 
+                While we try to honor requests to earmark, should we receive more gifts than we can
+                use for a program, we will reallocate them where the needs are greatest.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">Donor-advised funds</button>
+              <div class="faq-answer"><a href="">How to make a gift through your donor-advised fund.</a> </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">Stocks & mutual funds</button>
+              <div class="faq-answer"><a href="">How to make a stock donation.</a></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">IRA qualified charitable distributions</button>
+              <div class="faq-answer">Donate up to $108,000 per tax year directly from an IRA. See <a href="">HERE</a> for details.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">Make a gift outside the U.S.</button>
+              <div class="faq-answer">Get contact info for our offices worldwide <a href="">HERE</a>.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">Other ways to give</button>
+              <div class="faq-answer">Individuals like you provide 90 percent of the funding that powers our lifesaving work. Check out other ways to give <a href="">HERE</a>.</div>
+            </div>
+          </div>
+        </section>   
+    </main>
+      <!-- footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>About CHI</h4>
+          <p>Hospice Institute provides compassionate care and advocacy for children with life-limiting conditions and their families worldwide.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html#programs">Programs</a></li>
+            <li><a href="../index.html#resources">Resources</a></li>
+            <li><a href="../index.html#partners">Partners</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+            <li><a href="#">Donate</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>Email: <a href="mailto:info@chionline.org">info@chionline.org</a></p>
+          <p>Phone: <a href="tel:5551234567">+1 (555) 123-4567</a></p>
+          <p>Location: Virginia, USA</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.X.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hospice Institute. All rights reserved.</p>
+      </div>
+    </footer>
+<script src="../js/donation.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>
